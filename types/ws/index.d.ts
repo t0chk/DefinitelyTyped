@@ -74,7 +74,7 @@ declare class WebSocket extends EventEmitter {
     onclose: ((event: WebSocket.CloseEvent) => void) | null;
     onmessage: ((event: WebSocket.MessageEvent) => void) | null;
 
-    constructor(address: null);
+    constructor(address: null, protocols?: string | string[], options?: WebSocket.ClientOptions | ClientRequestArgs);
     constructor(address: string | URL, options?: WebSocket.ClientOptions | ClientRequestArgs);
     constructor(
         address: string | URL,
